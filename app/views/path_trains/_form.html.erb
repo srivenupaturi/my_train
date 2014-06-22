@@ -1,0 +1,17 @@
+<%= form_for(@path_train) do |f| %>
+  <% if @path_train.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@path_train.errors.count, "error") %> prohibited this path_train from being saved:</h2>
+
+      <ul>
+      <% @path_train.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
